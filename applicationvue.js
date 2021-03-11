@@ -2,6 +2,14 @@
 new Vue({
     el: '#app',
     data: {
-      value_test: 'valeur par défaut'
-    }
-  })
+      nom: 'Veuillez saisir votre nom',
+      mail: 'Veuillez saisir votre adresse mail'
+    },
+    methods : {
+      validate : function(){
+        this.mail = true;
+         if( this.validEmail(this.email)){
+            this.valid = true;
+         }
+  }}})
+
