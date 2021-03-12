@@ -7,26 +7,35 @@
 
     <body>
 
+      <p>
       <div class="ui main container" id="app">
         <input type="text" v-model="nom">
     <!--<div class="ui message" :class="success ? 'success' : 'error'"></div>-->  
         <h1>{{ nom }}</h1>
-        <label for="mail">Email</label>
-        <input
-        id="mail"
-        v-model="mail"
-        type="mail"
-        name="mail"
-      >
+      </p>
         
-        <h2>
-        {{ mail }}
+
+
+      <h2>{{ h2 }}</h2>
+      <!--Ci dessous nous n'avons pas besoin de V-model. En effet, celui-ci n'est utilisé que pour afficher, ce que l'on saisit, en direct -->
+      <input v-model="contenu">
+          
+      <!--Pour récupérer la valeur de l'input, l'hypothèse menerait à l'utilisation de la méthode 'Post'--> 
+      <!---En fait j'ai l'impression d'être hors sujet-->
+      <!--Second hyothèse: utiliser un return-->
+      <!---Le return s'avère être également une fausse piste-->
+      <!----->
       
-        </h2>
-        <input
-          type="submit"
-          value="Submit"
-        >
+
+      <button 
+      v-on:click="validate">Cliquez</button>
+
+      
+      </button>
+    
+             
+             
+
       </div>
 
       
