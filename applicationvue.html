@@ -2,46 +2,58 @@
 <html>
     <head>
         <title>My VueApp</title>
+        <style>
+          .red { 
+          color: red; 
+          }
+        </style>
         
     </head>
 
     <body>
-
-      <p>
+      <!--Dans le head, on applique la couleur red, grâce à l'objet '.red'-->
+      
       <div class="ui main container" id="app">
         <input type="text" v-model="nom">
-    <!--<div class="ui message" :class="success ? 'success' : 'error'"></div>-->  
         <h1>{{ nom }}</h1>
-      </p>
+      
         
 
 
-      <h2>{{ h2 }}</h2>
+      <h2 :class="{red: checked}">{{ h2 }}</h2>
+      <h1 :class="{red: checked}">{{ nom }}</h1><!--Ici, que se soit pour h1 ou pour h2, si 'checked' est 'true', il prendra la valeur 'red', -->
+      
       <!--Ci dessous nous n'avons pas besoin de V-model. En effet, celui-ci n'est utilisé que pour afficher, ce que l'on saisit, en direct -->
       <input v-model="contenu">
-          
-      <!--Pour récupérer la valeur de l'input, l'hypothèse menerait à l'utilisation de la méthode 'Post'--> 
-      <!---En fait j'ai l'impression d'être hors sujet-->
-      <!--Second hyothèse: utiliser un return-->
-      <!---Le return s'avère être également une fausse piste-->
-      <!----->
-      
+                
 
       <button 
       v-on:click="validate">Cliquez</button>
 
+      <input type= "checkbox" @click="checked = !checked"> 
+      <!--ici, nous avons un input de type 'checkbox'. @click nous permet de basculer entre les deux valeurs possibles de 'checked'.-->
+      {{ checked }}
+    
+
+
+        
+
+      </div>
+
+
+
       
-      </button>
+     
     
              
              
 
-      </div>
 
       
 
       <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
       <script src="applicationvue.js"></script>
+      
 
 
     </body>
