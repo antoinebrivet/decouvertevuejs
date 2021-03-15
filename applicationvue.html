@@ -33,8 +33,20 @@
       <input type= "checkbox" @click="checked = !checked"> 
       <!--ici, nous avons un input de type 'checkbox'. @click nous permet de basculer entre les deux valeurs possibles de 'checked'.-->
       {{ checked }}
-    
 
+      
+
+      <input type= "checkbox" @click="show = !show"> 
+      <!--Ici, nous avons un input de type 'checkbox'. @click nous permet de basculer entre les valeurs possible de 'show'-->
+       
+      <img v-if="show" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Montreal_-_QC_-_Skyline.jpg">
+      {{ show }}
+      <!--Ici, nous avons utilisé un 'v-if' qui va vérifier si la méthode "show" est true ou false. En fonction l'image apparaîtra ou pas.-->
+
+        
+      
+    
+      
 
         
 

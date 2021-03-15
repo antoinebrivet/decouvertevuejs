@@ -5,7 +5,8 @@ new Vue({
       nom: 'Veuillez saisir votre nom',
       h2: 'Veuillez saisir votre adresse mail',
       contenu:'',
-      checked: false //Notre valeur 'checked' contenue dans l'objet 'data'.
+      checked: false, //Notre valeur 'checked' contenue dans l'objet 'data'.
+      show: false //Notre valeur 'show' contenue dans l'objet 'data'. 
       
     },
     methods : {
@@ -15,4 +16,5 @@ new Vue({
       close: function() {
         this.success = false
       },
+      
     }})
